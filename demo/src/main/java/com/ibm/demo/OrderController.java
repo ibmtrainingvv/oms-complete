@@ -39,23 +39,6 @@ public class OrderController {
 		}
 	}
 
-	/**
-	 * method to search for an order
-	 * 
-	 * @param orderId
-	 * @return zero or matching order
-	 */
-//	@GetMapping("/order/{id}")
-//	Optional<Order> getOrder(@PathVariable("id") String orderID) {
-//		return orderService.getOrder(orderID);
-//	}
-//
-//	@GetMapping("/order/")
-//	List<Order> getOrders() {
-//		return orderService.getOrders();
-//
-//	}
-
 	@PutMapping("/order/{id}")
 	void updateOrder(@RequestBody @Valid Order order, BindingResult bindingResult, @PathVariable("id") String orderID) {
 		validateModel(bindingResult);
@@ -64,7 +47,6 @@ public class OrderController {
 	}
 
 	@DeleteMapping("/order/{id}")
-
 	void deleteOrder(@PathVariable("id") String orderID) {
 		System.out.println(orderID);
 		orderService.deleteOrder(orderID);

@@ -26,10 +26,6 @@ public class OrderService {
 		return savedOrder.getId();
 	}
 
-//	public Optional<Order> getOrder(String orderID) {
-//		return orderRepository.findById(orderID);
-//	}
-
 	public void updateOrder(Order order) {
 		orderRepository.save(order);
 	}
@@ -37,8 +33,5 @@ public class OrderService {
 	public void deleteOrder(String orderID) {
 		orderRepository.deleteById(orderID);
 	}
-//
-//	public List<Order> getOrders() {
-//		return orderRepository.findAll();
-//	}
+
 }
